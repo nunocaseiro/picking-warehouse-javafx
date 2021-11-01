@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipleiria.estg.dei.ei.pi.gui.GaFrameController">
+   <children>
+      <GridPane fx:id="parametersGrid" prefHeight="559.0" prefWidth="368.0" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="167.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="165.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="seedGaLabel" text="Seed:">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="seedGaField" GridPane.columnIndex="1" />
+            <Label text="Population size:" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="# of generations:" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Selection method:" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Tournament size:" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Selective pressure:" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Recombination method:" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Recombination prob.:" GridPane.rowIndex="7">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Mutation method:" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Mutation prob.:" GridPane.rowIndex="9">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="popSizeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="generationsField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tournamentSizeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="selectivePressureField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="recombinationProbField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="mutationProbField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="Collisions handling " GridPane.rowIndex="10">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Weight limitation" GridPane.rowIndex="11">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <ChoiceBox fx:id="selectionMethodFieldSelection" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="recombinationMethodField" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ChoiceBox fx:id="mutationMethodField" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <ChoiceBox fx:id="collisionsHandlingFieldCollisions" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <ChoiceBox fx:id="weightLimitationField" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label text="Time weight:" GridPane.rowIndex="12">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Collision weight:" GridPane.rowIndex="13">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="timeWeightField" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField fx:id="collisionWeightField" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label text="Best solution:" GridPane.rowIndex="14">
+               <GridPane.margin>
+                  <Insets left="10.0" top="20.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="1.0" />
+         </opaqueInsets>
+      </GridPane>
+      <TextArea fx:id="bestInRunArea" editable="false" layoutX="0" layoutY="628.0" prefHeight="166.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <LineChart fx:id="gaChart" animated="false" createSymbols="false" layoutX="363.0" layoutY="-1.0" prefHeight="728.0" prefWidth="627.0" title="Evolution" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="363.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <xAxis>
+          <NumberAxis animated="false" label="generation" prefHeight="39.0" prefWidth="581.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis animated="false" label="fitness" prefHeight="514.0" prefWidth="47.0" side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

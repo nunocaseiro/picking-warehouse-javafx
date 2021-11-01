@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="728.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipleiria.estg.dei.ei.pi.gui.ExperimentsFrameController">
+   <children>
+      <GridPane fx:id="parametersGrid" layoutY="27.0" prefWidth="496.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="177.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="0.0" prefWidth="332.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="7.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Population size:" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="# of generations:" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Selection method:" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Tournament size:" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Selective pressure:" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Recombination method:" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Recombination prob.:" GridPane.rowIndex="7">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Mutation method:" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Mutation prob.:" GridPane.rowIndex="9">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Collisions handling :" GridPane.rowIndex="10">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Weight limitation:" GridPane.rowIndex="11">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Number of agents:" GridPane.rowIndex="14">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Number of picks:" GridPane.rowIndex="15">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="popSizeArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="generationsArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="100" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="selectionMethodArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="Tournament" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="tournamentSizeArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="selectivePressureArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="recombinationMethodArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="PMX" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="recombinationProbArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="0.7" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="mutationMethodArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="Insert" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="mutationProbArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="collisionsHandlingArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="Type 2" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="weightLimitationArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="Both" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="numberAgentsArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="3" GridPane.columnIndex="1" GridPane.rowIndex="14">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="numberPicksArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="45" GridPane.columnIndex="1" GridPane.rowIndex="15">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Label text="Number of runs:">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="nrRunsArea" minHeight="3.0" promptText="100" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Label text="Time weight:" GridPane.rowIndex="12">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Collisions weight:" GridPane.rowIndex="13">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="timeWeightsArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="12">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="collisionWeightsArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="13">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Label text="Statistics:" GridPane.rowIndex="16">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="statisticsArea" editable="false" minHeight="3.0" onMouseClicked="#showEditParameters" prefHeight="200.0" prefWidth="200.0" text="StatisticBestAverage" GridPane.columnIndex="1" GridPane.rowIndex="16">
+               <GridPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="1.0" />
+         </opaqueInsets>
+      </GridPane>
+      <ProgressBar fx:id="progressBar" layoutY="745.0" prefHeight="20.0" prefWidth="1036.0" progress="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <BorderPane layoutX="496.0" layoutY="8.0" prefHeight="696.0" prefWidth="490.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="508.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <top>
+            <GridPane fx:id="editingParametersPane" prefHeight="365.0" prefWidth="428.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="315.330078125" minHeight="10.0" prefHeight="43.47886657714844" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="315.330078125" minHeight="10.0" prefHeight="43.47886657714844" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="315.330078125" minHeight="10.0" prefHeight="286.02113342285156" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="170.98944091796875" minHeight="10.0" prefHeight="49.669921875" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ListView fx:id="actualParameters" prefHeight="160.0" prefWidth="190.0" GridPane.rowIndex="2" />
+                  <ListView fx:id="selectExpInput" prefHeight="160.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="removeButton" mnemonicParsing="false" onMouseClicked="#remove" prefHeight="50.0" prefWidth="214.0" text="Remove" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onMouseClicked="#add" prefHeight="50.0" prefWidth="218.0" text="Add" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label fx:id="labelEditingParameter" text="Editing" />
+                  <Label text="Atual Parameters" GridPane.rowIndex="1" />
+                  <TextField fx:id="intExpInput" prefHeight="274.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="decimalExpInput" prefHeight="274.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="26.0" prefWidth="490.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane fx:id="gridRunStop" prefHeight="30.0" prefWidth="467.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="runExperimentsButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="490.0" text="Run" />
+                        <Button fx:id="stopExperiments" disable="true" mnemonicParsing="false" prefHeight="27.0" prefWidth="236.0" text="Stop" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

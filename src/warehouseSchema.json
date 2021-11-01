@@ -1,0 +1,451 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "nodes": [
+        {
+          "line": 0,
+          "nodeNumber": 1,
+          "column": 1,
+          "successors": [
+            {
+              "distance": 8.0,
+              "nodeNumber": 2
+            },
+            {
+              "distance": 3.0,
+              "nodeNumber": 6
+            }
+          ],
+          "type": "D"
+        }
+      ],
+      "edges": [
+        {
+          "distance": 3,
+          "node1Number": 1,
+          "edgeNumber": 1,
+          "node2Number": 6,
+          "direction": 1
+        }
+      ],
+      "agents": [
+        {
+          "line": 12,
+          "column": 4,
+          "edgeNumber": 13,
+          "capacity": 75
+        }
+      ],
+      "offloadArea": 36,
+      "maxLine": 32,
+      "maxColumn": 20
+    }
+  ],
+  "required": [
+    "nodes",
+    "edges",
+    "agents",
+    "offloadArea",
+    "maxLine",
+    "maxColumn"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "nodes": {
+      "id": "#/properties/nodes",
+      "type": "array",
+      "title": "The nodes schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "line": 0,
+            "nodeNumber": 1,
+            "column": 1,
+            "successors": [
+              {
+                "distance": 8.0,
+                "nodeNumber": 2
+              },
+              {
+                "distance": 3.0,
+                "nodeNumber": 6
+              }
+            ],
+            "type": "D"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "id": "#/properties/nodes/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "line": 0,
+                "nodeNumber": 1,
+                "column": 1,
+                "successors": [
+                  {
+                    "distance": 8.0,
+                    "nodeNumber": 2
+                  },
+                  {
+                    "distance": 3.0,
+                    "nodeNumber": 6
+                  }
+                ],
+                "type": "D"
+              }
+            ],
+            "required": [
+              "line",
+              "nodeNumber",
+              "column",
+              "successors",
+              "type"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "line": {
+                "id": "#/properties/nodes/items/anyOf/0/properties/line",
+                "type": "integer",
+                "title": "The line schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "nodeNumber": {
+                "id": "#/properties/nodes/items/anyOf/0/properties/nodeNumber",
+                "type": "integer",
+                "title": "The nodeNumber schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "column": {
+                "id": "#/properties/nodes/items/anyOf/0/properties/column",
+                "type": "integer",
+                "title": "The column schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "successors": {
+                "id": "#/properties/nodes/items/anyOf/0/properties/successors",
+                "type": "array",
+                "title": "The successors schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": [],
+                "examples": [
+                  [
+                    {
+                      "distance": 8.0,
+                      "nodeNumber": 2
+                    },
+                    {
+                      "distance": 3.0,
+                      "nodeNumber": 6
+                    }
+                  ]
+                ],
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "id": "#/properties/nodes/items/anyOf/0/properties/successors/items/anyOf/0",
+                      "type": "object",
+                      "title": "The first anyOf schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": {},
+                      "examples": [
+                        {
+                          "distance": 8.0,
+                          "nodeNumber": 2
+                        }
+                      ],
+                      "required": [
+                        "distance",
+                        "nodeNumber"
+                      ],
+                      "additionalProperties": true,
+                      "properties": {
+                        "distance": {
+                          "id": "#/properties/nodes/items/anyOf/0/properties/successors/items/anyOf/0/properties/distance",
+                          "type": "number",
+                          "title": "The distance schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0.0,
+                          "examples": [
+                            8.0
+                          ]
+                        },
+                        "nodeNumber": {
+                          "id": "#/properties/nodes/items/anyOf/0/properties/successors/items/anyOf/0/properties/nodeNumber",
+                          "type": "integer",
+                          "title": "The nodeNumber schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [
+                            2
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "id": "#/properties/nodes/items/anyOf/0/properties/successors/items"
+                }
+              },
+              "type": {
+                "id": "#/properties/nodes/items/anyOf/0/properties/type",
+                "type": "string",
+                "title": "The type schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "D"
+                ]
+              }
+            }
+          }
+        ],
+        "id": "#/properties/nodes/items"
+      }
+    },
+    "edges": {
+      "id": "#/properties/edges",
+      "type": "array",
+      "title": "The edges schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "distance": 3,
+            "node1Number": 1,
+            "edgeNumber": 1,
+            "node2Number": 6,
+            "direction": 1
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "id": "#/properties/edges/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "distance": 3,
+                "node1Number": 1,
+                "edgeNumber": 1,
+                "node2Number": 6,
+                "direction": 1
+              }
+            ],
+            "required": [
+              "distance",
+              "node1Number",
+              "edgeNumber",
+              "node2Number",
+              "direction"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "distance": {
+                "id": "#/properties/edges/items/anyOf/0/properties/distance",
+                "type": "integer",
+                "title": "The distance schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  3
+                ]
+              },
+              "node1Number": {
+                "id": "#/properties/edges/items/anyOf/0/properties/node1Number",
+                "type": "integer",
+                "title": "The node1Number schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "edgeNumber": {
+                "id": "#/properties/edges/items/anyOf/0/properties/edgeNumber",
+                "type": "integer",
+                "title": "The edgeNumber schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "node2Number": {
+                "id": "#/properties/edges/items/anyOf/0/properties/node2Number",
+                "type": "integer",
+                "title": "The node2Number schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  6
+                ]
+              },
+              "direction": {
+                "id": "#/properties/edges/items/anyOf/0/properties/direction",
+                "type": "integer",
+                "title": "The direction schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              }
+            }
+          }
+        ],
+        "id": "#/properties/edges/items"
+      }
+    },
+    "agents": {
+      "id": "#/properties/agents",
+      "type": "array",
+      "title": "The agents schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "line": 12,
+            "column": 4,
+            "edgeNumber": 13,
+            "capacity": 75
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "id": "#/properties/agents/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "line": 12,
+                "column": 4,
+                "edgeNumber": 13,
+                "capacity": 75
+              }
+            ],
+            "required": [
+              "line",
+              "column",
+              "edgeNumber",
+              "capacity"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "line": {
+                "id": "#/properties/agents/items/anyOf/0/properties/line",
+                "type": "integer",
+                "title": "The line schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  12
+                ]
+              },
+              "column": {
+                "id": "#/properties/agents/items/anyOf/0/properties/column",
+                "type": "integer",
+                "title": "The column schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  4
+                ]
+              },
+              "edgeNumber": {
+                "id": "#/properties/agents/items/anyOf/0/properties/edgeNumber",
+                "type": "integer",
+                "title": "The edgeNumber schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  13
+                ]
+              },
+              "capacity": {
+                "id": "#/properties/agents/items/anyOf/0/properties/capacity",
+                "type": "integer",
+                "title": "The capacity schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  75
+                ]
+              }
+            }
+          }
+        ],
+        "id": "#/properties/agents/items"
+      }
+    },
+    "offloadArea": {
+      "id": "#/properties/offloadArea",
+      "type": "integer",
+      "title": "The offloadArea schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        36
+      ]
+    },
+    "maxLine": {
+      "id": "#/properties/maxLine",
+      "type": "integer",
+      "title": "The maxLine schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        32
+      ]
+    },
+    "maxColumn": {
+      "id": "#/properties/maxColumn",
+      "type": "integer",
+      "title": "The maxColumn schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        20
+      ]
+    }
+  }
+}

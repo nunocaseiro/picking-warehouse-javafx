@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="mainsFrame" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipleiria.estg.dei.ei.pi.gui.MainFrameController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="loadLayoutButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false">
+               <tooltip>
+                  <Tooltip text="Import warehouse layout file" />
+               </tooltip></Button>
+            <Button fx:id="loadPicksButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false">
+               <tooltip>
+                  <Tooltip text="Import picks file" />
+               </tooltip></Button>
+            <Separator orientation="VERTICAL" />
+            <Button fx:id="runGaButton" mnemonicParsing="false">
+               <tooltip>
+                  <Tooltip text="Run genetic algorithm" />
+               </tooltip></Button>
+            <Button fx:id="stopGAButton" mnemonicParsing="false">
+               <tooltip>
+                  <Tooltip text="Stop genetic algorithm" />
+               </tooltip></Button>
+            <Separator orientation="VERTICAL" />
+            <Button fx:id="simulationButton" mnemonicParsing="false">
+               <tooltip>
+                  <Tooltip text="Play simulation" />
+               </tooltip></Button>
+            <Button fx:id="startPauseButton" mnemonicParsing="false" onMouseClicked="#playPause">
+               <tooltip>
+                  <Tooltip text="Play/Pause simulation" />
+               </tooltip></Button>
+            <Slider fx:id="slider" onMouseReleased="#playFromSlider" prefHeight="16.0">
+               <padding>
+                  <Insets left="15.0" />
+               </padding></Slider>
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" fx:id="tabPane">
+        <tabs>
+          <Tab fx:id="gaTab">
+              <content>
+                <fx:include fx:id="gaFrame" source="gaFrame.fxml" />
+              </content>
+               <tooltip>
+                  <Tooltip text="Genetic algorithm view" />
+               </tooltip>
+          </Tab>
+            <Tab fx:id="simulationTab">
+                <content>
+                    <fx:include fx:id="simulationFrame" source="simulationFrame.fxml" />
+                </content>
+               <tooltip>
+                  <Tooltip text="Simulation" />
+               </tooltip>
+            </Tab>
+            <Tab fx:id="experimentsTab">
+                <content>
+                    <fx:include fx:id="experimentsFrame" source="experimentsFrame.fxml" />
+                </content>
+               <tooltip>
+                  <Tooltip text="Experiments" />
+               </tooltip>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
